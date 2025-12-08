@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdur Rahman Onik, PhD Candidate</title>
+    <title>Abdur Rahman Onik</title>
     <style>
         * {
             margin: 0;
@@ -12,581 +12,560 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #2c3e50;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            background-attachment: fixed;
+            color: #24292e;
+            background: #fff;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         header {
-            background: rgba(30, 60, 114, 0.95);
-            backdrop-filter: blur(10px);
-            color: white;
-            padding: 100px 20px 70px;
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: #f6f8fa;
+            border-bottom: 1px solid #e1e4e8;
+            padding: 20px 0;
         }
 
-        header h1 {
-            font-size: 3.2em;
-            font-weight: 600;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        header .title {
-            font-size: 1.3em;
-            font-weight: 300;
-            opacity: 0.95;
-            margin-bottom: 25px;
-        }
-
-        .contact-links {
+        .header-content {
             display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin-top: 20px;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .contact-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 0.95em;
-            transition: all 0.3s;
-            opacity: 0.9;
-            padding: 8px 16px;
-            border-radius: 20px;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(5px);
-        }
-
-        .contact-links a:hover {
-            opacity: 1;
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #24292e;
         }
 
         nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-
-        nav ul {
-            list-style: none;
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 0;
-        }
-
-        nav li {
-            margin: 0;
+            gap: 30px;
         }
 
         nav a {
-            display: block;
-            padding: 18px 25px;
-            color: #2c3e50;
+            color: #586069;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95em;
-            transition: all 0.3s;
-            position: relative;
+            font-size: 14px;
+            transition: color 0.2s;
         }
 
         nav a:hover {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            transform: translateY(-2px);
+            color: #0366d6;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 3px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            transition: all 0.3s;
-            transform: translateX(-50%);
+        .main-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            padding-bottom: 60px;
         }
 
-        nav a:hover::after {
-            width: 80%;
+        .sidebar {
+            position: sticky;
+            top: 20px;
+            height: fit-content;
         }
 
-        section {
-            background: rgba(255, 255, 255, 0.98);
-            margin: 40px auto;
-            padding: 50px 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
+        .profile-section {
+            text-align: center;
         }
 
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+        .profile-image {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 1px solid #e1e4e8;
         }
 
-        h2 {
-            color: #1e3c72;
-            font-size: 2.2em;
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 24px;
             font-weight: 600;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid transparent;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+            color: #24292e;
+        }
+
+        .profile-title {
+            color: #586069;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+
+        .profile-location {
+            color: #586069;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e1e4e8;
+        }
+
+        .social-links a {
+            color: #586069;
+            font-size: 20px;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #0366d6;
+        }
+
+        .content-area {
+            min-width: 0;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #24292e;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e1e4e8;
+        }
+
+        .about-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #24292e;
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            background: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .info-box-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #24292e;
+        }
+
+        .info-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-box li {
+            margin-bottom: 8px;
+            padding-left: 20px;
             position: relative;
+            color: #24292e;
+            font-size: 14px;
         }
 
-        h2::after {
-            content: '';
+        .info-box li:before {
+            content: "•";
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            left: 5px;
+            color: #0366d6;
         }
 
-        h3 {
-            color: #2c3e50;
-            font-size: 1.3em;
-            font-weight: 500;
-            margin-top: 30px;
+        .news-item {
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #fff;
+            transition: box-shadow 0.2s;
+        }
+
+        .news-item:hover {
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .news-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #0366d6;
+        }
+
+        .news-meta {
+            font-size: 13px;
+            color: #586069;
             margin-bottom: 10px;
         }
 
-        .research-interests {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 5px solid #667eea;
-            line-height: 1.8;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        .news-description {
+            font-size: 14px;
+            color: #24292e;
+            line-height: 1.6;
+            margin-bottom: 10px;
         }
 
-        .education-item, .experience-item {
-            margin-bottom: 35px;
+        .tag {
+            display: inline-block;
+            background: #f1f8ff;
+            color: #0366d6;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            margin-right: 5px;
+            margin-top: 5px;
+        }
+
+        .pub-item {
+            margin-bottom: 25px;
             padding-bottom: 25px;
-            border-bottom: 1px solid #e9ecef;
+            border-bottom: 1px solid #e1e4e8;
         }
 
-        .education-item:last-child, .experience-item:last-child {
+        .pub-item:last-child {
             border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
         }
 
-        .degree-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-
-        .degree-title {
-            font-weight: 600;
-            color: #1e3c72;
-            font-size: 1.1em;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .date {
-            color: #6c757d;
-            font-size: 0.9em;
-            font-weight: 500;
-        }
-
-        .institution {
-            color: #495057;
-            font-size: 1.05em;
+        .pub-authors {
+            font-size: 14px;
+            color: #24292e;
             margin-bottom: 5px;
-        }
-
-        .gpa {
-            color: #6c757d;
-            font-size: 0.95em;
-        }
-
-        .publications-list {
-            list-style: none;
-        }
-
-        .publications-list li {
-            margin-bottom: 20px;
-            padding-left: 25px;
-            position: relative;
-            line-height: 1.7;
-        }
-
-        .publications-list li:before {
-            content: "▪";
-            position: absolute;
-            left: 0;
-            color: #1e3c72;
-            font-size: 1.2em;
-        }
-
-        .pub-title {
-            font-weight: 500;
-            color: #2c3e50;
         }
 
         .pub-venue {
+            font-size: 14px;
+            color: #0366d6;
             font-style: italic;
-            color: #495057;
+            margin-bottom: 5px;
         }
 
-        .stats {
-            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
-            padding: 30px;
-            border-radius: 15px;
+        .pub-details {
+            font-size: 13px;
+            color: #586069;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
             margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
 
-        .stats span {
-            display: inline-block;
-            margin: 0 25px;
-            font-size: 1.05em;
-            color: #495057;
-            padding: 15px;
-            transition: transform 0.3s;
-        }
-
-        .stats span:hover {
-            transform: translateY(-5px);
-        }
-
-        .stats strong {
-            color: transparent;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 2em;
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0366d6;
             display: block;
             margin-bottom: 5px;
-            font-weight: 700;
         }
 
-        .award-item {
-            padding: 20px 25px;
-            background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
-            margin-bottom: 15px;
-            border-radius: 12px;
-            border-left: 5px solid #667eea;
-            transition: all 0.3s;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        .stat-label {
+            font-size: 13px;
+            color: #586069;
         }
 
-        .award-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        .education-item {
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 3px solid #0366d6;
         }
 
-        .award-title {
+        .degree-title {
+            font-size: 16px;
             font-weight: 600;
-            color: #2c3e50;
+            color: #24292e;
             margin-bottom: 5px;
         }
 
-        .award-details {
-            color: #6c757d;
-            font-size: 0.95em;
+        .institution {
+            font-size: 14px;
+            color: #586069;
+            margin-bottom: 3px;
         }
 
-        ul.bullet-list {
-            margin-left: 20px;
-            margin-top: 15px;
-        }
-
-        ul.bullet-list li {
-            margin-bottom: 8px;
-            color: #495057;
+        .date-range {
+            font-size: 13px;
+            color: #6a737d;
         }
 
         footer {
+            background: #f6f8fa;
+            border-top: 1px solid #e1e4e8;
+            padding: 30px 0;
             text-align: center;
-            padding: 40px 20px;
-            color: #6c757d;
-            font-size: 0.9em;
+            color: #586069;
+            font-size: 13px;
         }
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
+        @media (max-width: 968px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
             }
 
-            header .title {
-                font-size: 1.1em;
+            .sidebar {
+                position: relative;
             }
 
-            nav a {
-                padding: 15px 18px;
-                font-size: 0.9em;
-            }
-
-            section {
-                padding: 30px 25px;
-                margin: 25px auto;
-            }
-
-            h2 {
-                font-size: 1.6em;
-            }
-
-            .degree-header {
-                flex-direction: column;
-                align-items: flex-start;
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="profile-image">
-            <img src="https://raw.githubusercontent.com/rahmanonik18/rahmanonik18.github.io/main/profile.jpg" alt="Abdur Rahman Onik">
-        </div>
-        <h1>Abdur Rahman Onik</h1>
-        <p class="title">PhD Candidate in Computer Science & Engineering</p>
-        <p class="title">Louisiana State University</p>
-        <div class="contact-links">
-            <a href="mailto:aonik1@lsu.edu">aonik1@lsu.edu</a>
-            <a href="https://github.com/rahmanonik18" target="_blank">GitHub: rahmanonik18</a>
-            <a href="https://linkedin.com/in/rahmanonik" target="_blank">LinkedIn: rahmanonik</a>
-            <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">ARO</div>
+                <nav>
+                    <a href="#about">Home</a>
+                    <a href="#research">Research</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#news">News</a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#awards">Awards</a></li>
-        </ul>
-    </nav>
-
     <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p style="font-size: 1.05em; line-height: 1.8; color: #495057;">
-                I am a PhD candidate at Louisiana State University with a focus on security and privacy in mobile applications. 
-                My research investigates the gap between privacy policies and actual data handling practices, developing forensic 
-                methodologies and automated frameworks to audit mobile app ecosystems at scale.
-            </p>
-            <p style="font-size: 1.05em; line-height: 1.8; color: #495057; margin-top: 15px;">
-                <strong>Immigration Status:</strong> U.S. Permanent Resident (Green Card Holder)
-            </p>
-        </section>
-
-        <section id="research">
-            <h2>Research Interests</h2>
-            <div class="research-interests">
-                <p>
-                    My research focuses on <strong>security and privacy in mobile applications</strong>, particularly investigating 
-                    how apps collect, store, and share user data, often in ways that contradict their stated privacy policies. 
-                    I develop forensic methods to extract and analyze app data from device storage and network traffic, enabling 
-                    a deeper understanding of actual data handling practices.
-                </p>
-                <p style="margin-top: 15px;">
-                    To address the gap between policy and practice, I am designing a novel framework that uses <strong>Large Language 
-                    Models (LLMs)</strong> to automatically parse privacy policies and compare them with empirically observed data 
-                    collection behaviors. This semi-automated approach enables scalable privacy compliance assessment across large 
-                    app ecosystems.
-                </p>
-                <p style="margin-top: 15px;">
-                    As part of this work, I am developing the <strong>App Privacy Compliance Index (APCI)</strong>, a standardized 
-                    metric to quantify app transparency and privacy alignment. My broader goal is to build tools and frameworks that 
-                    empower end-users, investigators, and regulators to audit mobile applications effectively.
-                </p>
-            </div>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            
-            <div class="education-item">
-                <div class="degree-header">
-                    <span class="degree-title">PhD in Computer Science and Engineering</span>
-                    <span class="date">2022 – Present (Expected Spring 2026)</span>
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="profile-section">
+                    <div class="profile-image">
+                        <img src="profile.jpg" alt="Abdur Rahman Onik">
+                    </div>
+                    <h1 class="profile-name">Abdur Rahman Onik</h1>
+                    <p class="profile-title">PhD Candidate</p>
+                    <p class="profile-location">Louisiana State University</p>
+                    <div class="social-links">
+                        <a href="mailto:aonik1@lsu.edu" title="Email">✉</a>
+                        <a href="https://github.com/rahmanonik18" target="_blank" title="GitHub">⚡</a>
+                        <a href="https://linkedin.com/in/rahmanonik" target="_blank" title="LinkedIn">in</a>
+                        <a href="https://scholar.google.com" target="_blank" title="Google Scholar">🎓</a>
+                    </div>
                 </div>
-                <div class="institution">Louisiana State University, Baton Rouge, LA</div>
-                <div class="gpa">GPA: 3.8/4.0</div>
-            </div>
+            </aside>
 
-            <div class="education-item">
-                <div class="degree-header">
-                    <span class="degree-title">Master of Science in Computer Science and Engineering</span>
-                    <span class="date">2022 – 2025</span>
-                </div>
-                <div class="institution">Louisiana State University, Baton Rouge, LA</div>
-                <div class="gpa">GPA: 3.8/4.0</div>
-            </div>
+            <main class="content-area">
+                <section id="about" class="section">
+                    <h2 class="section-title">About me</h2>
+                    <p class="about-text">
+                        I am a PhD candidate at Louisiana State University specializing in security and privacy in mobile applications. 
+                        My research investigates the gap between privacy policies and actual data handling practices in mobile apps, 
+                        working at the Baggil(i) Truth Lab (BiTlab).
+                    </p>
+                    <p class="about-text">
+                        <strong>Immigration Status:</strong> U.S. Permanent Resident (Green Card Holder)
+                    </p>
 
-            <div class="education-item">
-                <div class="degree-header">
-                    <span class="degree-title">Bachelor of Science in Computer Science and Engineering</span>
-                    <span class="date">2011 – 2015</span>
-                </div>
-                <div class="institution">Ahsanullah University of Science and Technology, Bangladesh</div>
-                <div class="gpa">GPA: 3.37/4.0</div>
-            </div>
-        </section>
+                    <div class="info-box">
+                        <div class="info-box-title">What I share on GitHub</div>
+                        <ul>
+                            <li>Forensic analysis tools and methodologies</li>
+                            <li>Scripts for privacy compliance assessment</li>
+                            <li>Data from my research publications</li>
+                        </ul>
+                    </div>
 
-        <section id="publications">
-            <h2>Publications</h2>
-            
-            <div class="stats">
-                <span><strong>413</strong><br>Total Citations</span>
-                <span><strong>7</strong><br>h-index</span>
-                <span><strong>10+</strong><br>Peer-Reviewed Papers</span>
-            </div>
+                    <div class="info-box">
+                        <div class="info-box-title">My primary research areas</div>
+                        <ul>
+                            <li>Mobile application security and privacy</li>
+                            <li>Digital forensics of instant messaging apps</li>
+                            <li>Cloud forensics and IoT device analysis</li>
+                            <li>LLM-based privacy policy analysis</li>
+                        </ul>
+                    </div>
+                </section>
 
-            <h3>Selected Publications</h3>
-            <ul class="publications-list">
-                <li>
-                    <span class="pub-title">A Systematic Literature Review of Secure Instant Messaging Applications from a Digital Forensics Perspective.</span>
-                    <span class="pub-venue">ACM Computing Surveys</span> (2025). <em>IF 28.0; Ranked 1/143 in CS Theory & Methods</em>
-                </li>
-                
-                <li>
-                    <span class="pub-title">Money on My Mind: Forensic Investigation of Venmo Payment App.</span>
-                    <span class="pub-venue">Proceedings of WSDF 2025</span>, Ghent, Belgium.
-                </li>
-                
-                <li>
-                    <span class="pub-title">So fresh, so clean: Cloud forensic analysis of the Amazon iRobot Roomba vacuum.</span>
-                    <span class="pub-venue">Forensic Science International: Digital Investigation</span> (2024).
-                </li>
-                
-                <li>
-                    <span class="pub-title">Hit and run: Forensic vehicle event reconstruction through driver-based cloud data from Progressive's snapshot application.</span>
-                    <span class="pub-venue">Forensic Science International: Digital Investigation</span> (2024).
-                </li>
-                
-                <li>
-                    <span class="pub-title">Blue Skies from (X?s) Pain: A Digital Forensic Analysis of Threads and Bluesky.</span>
-                    <span class="pub-venue">Proceedings of ARES 2024</span>.
-                </li>
-            </ul>
+                <section id="research" class="section">
+                    <h2 class="section-title">Research Interests</h2>
+                    <p class="about-text">
+                        My research focuses on security and privacy in mobile applications, particularly investigating how apps 
+                        collect, store, and share user data, often in ways that contradict their stated privacy policies. I develop 
+                        forensic methods to extract and analyze app data from device storage and network traffic.
+                    </p>
+                    <p class="about-text">
+                        I am designing a novel framework that uses Large Language Models (LLMs) to automatically parse privacy 
+                        policies and compare them with empirically observed data collection behaviors. As part of this work, I am 
+                        developing the App Privacy Compliance Index (APCI), a standardized metric to quantify app transparency.
+                    </p>
+                </section>
 
-            <h3>Papers Under Review</h3>
-            <ul class="publications-list">
-                <li>The Patch That Broke the World: Reddit Crowd On CrowdStrike's Outage. <em>Communications of the ACM</em></li>
-                <li>From Device to Cloud: A Forensic Analysis of the Burner Application in Android Device. <em>DFRWS EU 2026</em></li>
-                <li>SoK: Clash of the Titans: Privacy Enhancing Technologies vs Network Forensics. <em>PoPET 2026</em></li>
-                <li>Domo Arigato, Mr. Roboto: A General and Practical Approach for Humanoid Forensic Readiness. <em>DFRWS EU 2026</em></li>
-            </ul>
-        </section>
+                <section id="publications" class="section">
+                    <h2 class="section-title">Publications</h2>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">413</span>
+                            <span class="stat-label">Total Citations</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">7</span>
+                            <span class="stat-label">h-index</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Publications</span>
+                        </div>
+                    </div>
 
-        <section id="experience">
-            <h2>Academic Experience</h2>
-            
-            <div class="experience-item">
-                <h3>Research Assistant</h3>
-                <div class="date" style="margin-top: -5px; margin-bottom: 10px;">Baggil(i) Truth Lab (BiTlab), Louisiana State University | January 2023 – Present</div>
-                <p style="color: #495057; line-height: 1.7;">
-                    Conducting research spanning secure messaging, social media, automotive telematics, and IoT devices. 
-                    Lead author on multiple high-impact publications in top-tier journals and conferences. Currently have 
-                    four papers under review at prestigious venues including ACM Communications, DFRWS, and PoPET.
-                </p>
-            </div>
+                    <div class="pub-item">
+                        <div class="pub-authors">
+                            <strong>Abdur Rahman Onik</strong>, Joseph Brown, Clinton Walker, Ibrahim Baggili
+                        </div>
+                        <div class="pub-venue">
+                            A Systematic Literature Review of Secure Instant Messaging Applications from a Digital Forensics Perspective
+                        </div>
+                        <div class="pub-details">
+                            ACM Computing Surveys (2025). IF 28.0; Ranked 1/143 in CS Theory & Methods
+                        </div>
+                        <span class="tag">ACM</span>
+                        <span class="tag">Digital Forensics</span>
+                    </div>
 
-            <div class="experience-item">
-                <h3>Teaching Assistant</h3>
-                <div class="date" style="margin-top: -5px; margin-bottom: 10px;">Louisiana State University | 2023</div>
-                <ul class="bullet-list">
-                    <li><strong>CSC 2700:</strong> Intro to Digital Forensics Science</li>
-                    <li><strong>CSC 3102:</strong> Advanced Data Structures and Algorithm Analysis</li>
-                    <li><strong>CSC 3200:</strong> Ethics in Computing (Developed course curriculum)</li>
-                </ul>
-            </div>
+                    <div class="pub-item">
+                        <div class="pub-authors">
+                            Trevor Spinosa, <strong>Abdur Rahman Onik</strong>, Joshua Rovira, Ibrahim Baggili
+                        </div>
+                        <div class="pub-venue">
+                            Money on My Mind: Forensic Investigation of Venmo Payment App
+                        </div>
+                        <div class="pub-details">
+                            Proceedings of WSDF 2025, Ghent, Belgium
+                        </div>
+                        <span class="tag">Mobile Forensics</span>
+                    </div>
 
-            <h2 style="margin-top: 50px;">Industry Experience</h2>
-            
-            <div class="experience-item">
-                <h3>Senior Software Engineer</h3>
-                <div class="date" style="margin-top: -5px; margin-bottom: 10px;">General Pharmaceutical Limited, Bangladesh | April 2022 – July 2022</div>
-                <ul class="bullet-list">
-                    <li>Led Android app development projects and mentored junior developers</li>
-                    <li>Improved app performance by 20% through code reviews and best practices</li>
-                    <li>Increased system efficiency by 30% through full-cycle development of Payroll and KPI systems</li>
-                </ul>
-            </div>
+                    <div class="pub-item">
+                        <div class="pub-authors">
+                            <strong>Abdur Rahman Onik</strong>, Ruba Alsmadi, Ibrahim Baggili, Andrew M. Webb
+                        </div>
+                        <div class="pub-venue">
+                            So fresh, so clean: Cloud forensic analysis of the Amazon iRobot Roomba vacuum
+                        </div>
+                        <div class="pub-details">
+                            Forensic Science International: Digital Investigation (2024)
+                        </div>
+                        <span class="tag">Cloud Forensics</span>
+                        <span class="tag">IoT</span>
+                    </div>
 
-            <div class="experience-item">
-                <h3>Software Engineer</h3>
-                <div class="date" style="margin-top: -5px; margin-bottom: 10px;">Opsonin Pharmaceutical Limited, Bangladesh | November 2015 – April 2022</div>
-                <ul class="bullet-list">
-                    <li>Designed and developed Android applications resulting in 5% increase in sales</li>
-                    <li>Built reusable libraries and frameworks for future development</li>
-                    <li>Increased website page views by 35% through improved UI/UX design</li>
-                </ul>
-            </div>
-        </section>
+                    <div class="pub-item">
+                        <div class="pub-authors">
+                            <strong>Abdur Rahman Onik</strong>, Trevor T. Spinosa, Abdulla M. Asad, Ibrahim Baggili
+                        </div>
+                        <div class="pub-venue">
+                            Hit and run: Forensic vehicle event reconstruction through driver-based cloud data
+                        </div>
+                        <div class="pub-details">
+                            Forensic Science International: Digital Investigation (2024)
+                        </div>
+                        <span class="tag">Automotive</span>
+                        <span class="tag">Cloud Data</span>
+                    </div>
+                </section>
 
-        <section id="awards">
-            <h2>Awards & Recognition</h2>
-            
-            <div class="award-item">
-                <div class="award-title">Second Place, Geauxlden Mike Innovation Awards (2024)</div>
-                <div class="award-details">Graduate Student Research Symposium, LSU</div>
-            </div>
+                <section id="news" class="section">
+                    <h2 class="section-title">News</h2>
 
-            <div class="award-item">
-                <div class="award-title">Divisional Runner-up, Bangladesh Math Olympiad (2008)</div>
-            </div>
+                    <div class="news-item">
+                        <div class="news-title">Second Place at Geauxlden Mike Innovation Awards</div>
+                        <div class="news-meta">Posted Oct 2024</div>
+                        <div class="news-description">
+                            Received second place at the Graduate Student Research Symposium for innovative research on 
+                            forensic vehicle event reconstruction through cloud data analysis.
+                        </div>
+                        <span class="tag">Awards</span>
+                    </div>
 
-            <div class="award-item">
-                <div class="award-title">Divisional Runner-up, Bangladesh Chemistry Olympiad (2009)</div>
-            </div>
+                    <div class="news-item">
+                        <div class="news-title">Paper Published in ACM Computing Surveys</div>
+                        <div class="news-meta">Posted Jan 2025</div>
+                        <div class="news-description">
+                            Our systematic literature review on secure instant messaging applications has been published in 
+                            ACM Computing Surveys (IF 28.0), one of the top venues in computer science.
+                        </div>
+                        <span class="tag">Publication</span>
+                        <span class="tag">ACM</span>
+                    </div>
 
-            <h3 style="margin-top: 40px;">Reviewer Activities</h3>
-            <ul class="bullet-list">
-                <li>Reviewer, Multimedia Systems (Springer) - 2025</li>
-                <li>Reviewer, Scientific Reports (Nature) - 2025</li>
-                <li>Reviewer, Knowledge-Based Systems (Elsevier) - 2023</li>
-                <li>Subreviewer, DFRWS USA 2023–2024 & DFRWS EU 2023</li>
-            </ul>
-        </section>
+                    <div class="news-item">
+                        <div class="news-title">Presented at DFRWS USA 2024</div>
+                        <div class="news-meta">Posted Jul 2024</div>
+                        <div class="news-description">
+                            Presented our research on forensic vehicle event reconstruction at the Digital Forensics Research 
+                            Workshop in Baton Rouge, Louisiana.
+                        </div>
+                        <span class="tag">Conference</span>
+                        <span class="tag">DFRWS</span>
+                    </div>
+
+                    <div class="news-item">
+                        <div class="news-title">Multiple Papers Under Review</div>
+                        <div class="news-meta">Posted Dec 2024</div>
+                        <div class="news-description">
+                            Currently have four papers under review at top-tier venues including ACM Communications, 
+                            DFRWS EU 2026, and PoPET 2026.
+                        </div>
+                        <span class="tag">Research</span>
+                    </div>
+                </section>
+
+                <section id="education" class="section">
+                    <h2 class="section-title">Education</h2>
+
+                    <div class="education-item">
+                        <div class="degree-title">PhD in Computer Science and Engineering</div>
+                        <div class="institution">Louisiana State University</div>
+                        <div class="date-range">2022 – Present (Expected Spring 2026) • GPA: 3.8/4.0</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="degree-title">Master of Science in Computer Science and Engineering</div>
+                        <div class="institution">Louisiana State University</div>
+                        <div class="date-range">2022 – 2025 • GPA: 3.8/4.0</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="degree-title">Bachelor of Science in Computer Science and Engineering</div>
+                        <div class="institution">Ahsanullah University of Science and Technology</div>
+                        <div class="date-range">2011 – 2015 • GPA: 3.37/4.0</div>
+                    </div>
+                </section>
+            </main>
+        </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 Abdur Rahman Onik. All rights reserved.</p>
-        <p style="margin-top: 10px;">Baton Rouge, Louisiana, USA</p>
+        <div class="container">
+            <p>© 2025 Abdur Rahman Onik. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
